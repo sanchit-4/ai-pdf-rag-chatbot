@@ -1,0 +1,41 @@
+/* packages/frontend/src/app/globals.css */
+
+@keyframes move-particles {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(5vw, 10vh); }
+    50% { transform: translate(-10vw, 5vh); }
+    75% { transform: translate(10vw, -10vh); }
+    100% { transform: translate(0, 0); }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #02010a;
+  color: #fff;
+  overflow-x: hidden; /* Prevent horizontal scrollbars */
+}
+
+body::before {
+  content: '';
+  position: fixed; /* Use fixed positioning to ensure it covers viewport */
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(circle at 20% 20%, rgba(138, 43, 226, 0.15) 0%, transparent 30%),
+                    radial-gradient(circle at 80% 70%, rgba(0, 255, 255, 0.1) 0%, transparent 25%);
+  animation: move-particles 30s linear infinite;
+  z-index: -1;
+}
+
+/* This is the new, targeted class that will fix the centering */
+.pageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box; /* Prevents padding from adding to the width/height */
+}
