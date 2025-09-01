@@ -433,7 +433,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   setIsReplying(true);
 
   try {
-    const response = await fetch(`${BACKEND_URL}/api/login`, {
+    const response = await fetch(`${BACKEND_URL}/api/chat`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
