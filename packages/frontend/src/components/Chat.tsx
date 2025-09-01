@@ -421,7 +421,7 @@ export function Chat() {
   };
 
   // inside the Chat component in Chat.tsx
-
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
 const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
   if (!input.trim() || !documentName) return;
@@ -433,7 +433,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   setIsReplying(true);
 
   try {
-    const response = await fetch('http://localhost:8000/api/chat', {
+    const response = await fetch(`${BACKEND_URL}/api/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

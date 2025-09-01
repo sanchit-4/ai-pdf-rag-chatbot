@@ -10,9 +10,10 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 8000;
 
-// Configure CORS to allow our Next.js frontend to call the API
+const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:3000';
+console.log(`CORS enabled for origin: ${frontendUrl}`); 
 app.use(cors({
-    origin: 'http://localhost:3000' // The default port for Next.js
+    origin: frontendUrl // The default port for Next.js
 }));
 
 app.use(express.json());
