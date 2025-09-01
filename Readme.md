@@ -59,14 +59,13 @@ This graph-based approach makes the system robust, debuggable, and capable of ha
 
 
 ## Tech Stack
-Category	Technology
 
-Frontend	Next.js, React, TypeScript
+Frontend  ---->  Next.js, React, TypeScript
 
-Backend	    Node.js, Express, TypeScript
+Backend  ---->  Node.js, Express, TypeScript
 
-AI & LLM	LangChain.js, LangGraph, Google Gemini
+AI & LLM  ---->  LangChain.js, LangGraph, Google Gemini
 
-Database	Supabase (PostgreSQL with pgvector)
+Database  ---->  Supabase (PostgreSQL with pgvector)
 
-Deployment	Vercel (Frontend), Render (Backend)
+Deployment  ---->  Vercel (Frontend), Render (Backend)
